@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 import os
-from get_pokemon import get_sprite
+import get_pokemon
 
 # Get app token
 load_dotenv()
@@ -23,8 +23,10 @@ async def hello(ctx):
 
 @bot.command()
 async def pokemon(ctx):
-    sprite = get_sprite()
+    sprite = get_pokemon.get_sprite()
+    pokemon_name = get_pokemon.get_name()
     await ctx.send(sprite["front_default"])
+    await ctx.send(pokemon_name)
 
 
 bot.run(TOKEN)
