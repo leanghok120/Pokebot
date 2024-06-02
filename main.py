@@ -3,6 +3,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 import os
 import get_pokemon
+from keep_alive import import keep_alive
 
 # Get app token
 load_dotenv()
@@ -28,5 +29,5 @@ async def pokemon(ctx):
     await ctx.send(sprite["front_default"])
     await ctx.send(pokemon_name)
 
-
+keep_alive()
 bot.run(TOKEN)
