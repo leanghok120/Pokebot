@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 import os
+from get_pokemon import get_sprite
 
 # Get app token
 load_dotenv()
@@ -21,10 +22,9 @@ async def hello(ctx):
 
 
 @bot.command()
-async def rowlet(ctx):
-    await ctx.send(
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/722.png"
-    )
+async def pokemon(ctx):
+    sprite = get_sprite()
+    await ctx.send(sprite["front_default"])
 
 
 bot.run(TOKEN)
