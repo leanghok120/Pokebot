@@ -15,4 +15,9 @@ async def on_ready():
     print("Pokebot is online!")
 
 
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f"Hello, {ctx.author.mention}!")
+
+
 bot.run(TOKEN)
