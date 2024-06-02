@@ -18,10 +18,9 @@ def get_random_pokemon():
     return pokemon_data
 
 
-pokemon_data = get_random_pokemon()
-
-
 def get_sprite():
+    pokemon_data = get_random_pokemon()
+
     sprites = pokemon_data["sprites"]
     sprites_other = sprites["other"]
     sprites_home = sprites_other["home"]
@@ -30,6 +29,8 @@ def get_sprite():
 
 
 def get_name():
+    pokemon_data = get_random_pokemon()
+
     pokemon_name = pokemon_data["name"]
 
     return pokemon_name
