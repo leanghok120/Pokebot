@@ -1,15 +1,15 @@
 import requests
 import random
 
-url = "https://pokeapi.co/api/v2/pokemon?limit=1"
-response = requests.get(url)
-data = response.json()
-
 
 def get_random_pokemon():
-    total_pokemon = data["count"]
+    url = "https://pokeapi.co/api/v2/pokemon?limit=1"
+    response = requests.get(url)
+    data = response.json()
 
-    random_id = random.randint(1, total_pokemon)
+    # total_pokemon = data["count"]
+
+    random_id = random.randint(1, 1000)
 
     pokemon_url = f"https://pokeapi.co/api/v2/pokemon/{random_id}"
     pokemon_response = requests.get(pokemon_url)
