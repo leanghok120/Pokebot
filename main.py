@@ -22,9 +22,9 @@ async def hello(ctx):
 
 @bot.command()
 async def rowlet(ctx):
-    with open("rowlet.jpg", "rb") as f:
-        picture = discord.File(f)
-        await ctx.send(file=picture)
+    await ctx.send(
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/722.png"
+    )
 
 
 bot.run(TOKEN)
