@@ -21,7 +21,7 @@ async def hello(ctx):
 
 
 @bot.command()
-async def rowlett(ctx):
+async def rowlet(ctx):
     with open("rowlet.jpg", "rb") as f:
         picture = discord.File(f)
         await ctx.send(file=picture)
