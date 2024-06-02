@@ -20,4 +20,11 @@ async def hello(ctx):
     await ctx.send(f"Hello, {ctx.author.mention}!")
 
 
+@bot.command()
+async def rowlett(ctx):
+    with open("rowlet.jpg", "rb") as f:
+        picture = discord.File(f)
+        await ctx.send(file=picture)
+
+
 bot.run(TOKEN)
