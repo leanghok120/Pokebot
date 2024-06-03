@@ -5,6 +5,8 @@ import random
 def get_random_pokemon():
     url = "https://pokeapi.co/api/v2/pokemon?limit=1"
     response = requests.get(url)
+    if response.status_code != 200:
+        return "Couldn't fetch pokemon, try again"
     data = response.json()
 
     # total_pokemon = data["count"]

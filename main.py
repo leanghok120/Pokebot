@@ -22,17 +22,19 @@ async def on_ready():
         print(e)
 
 
-# @bot.tree.command(name="pokemon")
-# async def pokemon(interaction: discord.Interaction):
-#     sprite = get_pokemon.get_sprite()
-#     pokemon_name = get_pokemon.get_name()
-#
-#     await interaction.response.send_message(f"{sprite}\n{pokemon_name}")
-
-
 @bot.tree.command(name="hello")
 async def hello(interaction: discord.Interaction):
     await interaction.response.send_message(f"Hello {interaction.user.mention}!")
+
+
+@bot.tree.command(name="pokemon")
+async def pokemon(interaction: discord.Interaction):
+    pokemon_sprite = get_pokemon.get_sprite()
+    pokemon_name = get_pokemon.get_name()
+
+    await interaction.response.send_message(
+        f"{pokemon_name}: {pokemon_sprite["front_default"]}"
+    )
 
 
 bot.run(TOKEN)
