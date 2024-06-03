@@ -31,4 +31,4 @@ All contributions are welcomed. To contribute to Pokebot:
 ## Todos
 
 - / commands
-
+- Include all pokemons instead of only 1000 pokemons from PokeAPI
