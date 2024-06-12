@@ -15,8 +15,8 @@ To add this bot to your server, go to [Pokebot](https://discord.com/api/oauth2/a
 
 Currently, there is only 2 commands:
 
-- .hello: Says hello
-- .pokemon: gets a random pokemon's sprite and name
+- /hello: Says hello
+- /pokemon: gets a random pokemon's sprite and name
 
 ## Contributing
 
